@@ -36,7 +36,7 @@ def factory():
   for i in range(n):
     final *= i
   print("Ket qua la " + str(final))
-#Bài 5 sắp xếp
+#Bài 5 sắp xếp tăng dần
 def sortAscend():
   arr = [int(x) for x in input().split()]
   for i in range(len(arr)):
@@ -44,7 +44,7 @@ def sortAscend():
           if(arr[i] > arr[j]):
               arr[i], arr[j] = arr[j], arr[i]
   print(arr)
-#Bài 6 từ lớn đến bé
+#Bài 6 từ giảm dần
 def sortDescend():
   arr = [int(x) for x in input().split()]
   for i in range(len(arr)):
