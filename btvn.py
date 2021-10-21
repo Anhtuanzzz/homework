@@ -33,7 +33,7 @@ def sum():
 def factory():
   n = int(input())
   final = 1
-  for i in range(n):
+  for i in range(1,n + 1):
     final *= i
   print("Ket qua la " + str(final))
 #Bài 5 sắp xếp tăng dần
@@ -43,7 +43,7 @@ def sortAscend():
       for j in range(i + 1, len(arr)):
           if(arr[i] > arr[j]):
               arr[i], arr[j] = arr[j], arr[i]
-  print(arr)
+  print("Day so da duoc sap xep la: " + str(arr))
 #Bài 6 từ giảm dần
 def sortDescend():
   arr = [int(x) for x in input().split()]
@@ -51,5 +51,5 @@ def sortDescend():
       for j in range(i + 1, len(arr)):
           if(arr[i] < arr[j]):
               arr[i], arr[j] = arr[j], arr[i]
-  print(arr)
+  print("Day so da duoc sap xep la: " + str(arr))
   
