@@ -44,59 +44,58 @@ void factorial(n) {
 void list() {
     //Khai bao mang
     int array[100];
-    int size;
+    int n;
     printf("Nhap kich co cua mang: ");
-    scanf("%i", &size);
-    if (size < 2) {
+    scanf("%i", &n);
+    if (n <= 2) {
         printf("Kich co khong hop le!");
         return;
     }
 
     //Nhap lieu cho mang
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < n; i++) {
         printf("Nhap phan tu [%i]: ", i);
         scanf("%i", &array[i]);
     }
-
-    //In mang ra
+    7l;//In mang ra
     printf("\nMang ban dau la: ");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < n; i++) {
         printf(" %i", array[i]);
     }
 
     //Sap xep mang
-    for (int i = 0; i < size; i++) {
-        for (int j = i + 1; j < size; j++) {
-            if (array[i] > array[j]) {
-                array[i] += array[j];
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (array[i] < array[j]) {
+                array[i] +=  array[j];
                 array[j] = array[i] - array[j];
                 array[i] -= array[j];
             }
         }
     }
 
-    //In mang ra phat nua
+    //In mang ra
     printf("\nMang da sap xep la: ");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < n; i++) {
         printf(" %i", array[i]);
     }
 
     //Mang da duoc loai bo
-    for (int i = 0; i< size; i++){
-        for (int j = i + 1; j < size; j++){
+    for (int i = 0; i< n; i++){
+        for (int j = i + 1; j < n; j++){
             if (array[i] == array[j]){
-                for (int k = j; k < size; k++){
+                for (int k = j; k < n; k++){
                     array[k] = array[k+1];
                 }
                 j--;
-                size--;
+                n--;
             }
         }
     }
 
     //In lai phat nua nao
     printf("\nMang da duoc loai bo la: ");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < n; i++) {
         printf(" %i", array[i]);
     }
     return;
